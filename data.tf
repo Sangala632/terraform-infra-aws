@@ -18,13 +18,13 @@ data "aws_ssm_parameter" "frontend_alb_listener_arn" {
   name = "/${var.project}/${var.environment}/frontend_alb_listener_arn"
 }
 
-data "aws_ami" "Roboshop_project" {
+data "aws_ami" "roboshop" {
   owners      = ["973714476881"]
   most_recent = true
 
   filter {
     name   = "name"
-    values = ["RHEL-9-DevOps-Practice"]
+    values = ["Redhat-9-DevOps-Practice"]
   }
 
   filter {
